@@ -1,3 +1,6 @@
+[Unit]
+After=redis-demo.service
+
 [Service]
 ExecStart=/usr/bin/docker run -rm -name %n polvi/simple-amb 172.17.42.1:4001
 ExecStop=/usr/bin/docker stop -t 3 %n
